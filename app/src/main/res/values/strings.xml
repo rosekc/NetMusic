@@ -13,4 +13,6 @@
     <string name="setting">设置</string>
     <string name="exit">退出</string>
     <string name="username">用户名_1234567</string>
+    <string name="have_reg">已签到</string>
+    <string name="no_reg">点击签到</string>
 </resources>

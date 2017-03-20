@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private MainFragmentAdapter mMainFragmentAdapter;
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
+    public String tes = "nihao";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initViewPage(){
         mViewPager = (ViewPager)findViewById(R.id.main_view_page);
-        mMainFragmentAdapter = new MainFragmentAdapter(getSupportFragmentManager());
+        mMainFragmentAdapter = new MainFragmentAdapter(getSupportFragmentManager(),this);
         mViewPager.setAdapter(mMainFragmentAdapter);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 初始化toolbar
      */
-    public void initToolbar(){
+    private void initToolbar(){
         //初始化toolbar
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 初始化抽屉
      */
-    public void initDraw(){
+    private void initDraw(){
         //初始化抽屉
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -107,4 +108,12 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.sreach, menu);
         return true;
     }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    //以下是各组员添加代码,添加代码注明功能,自己的姓名                                              //
+    //如果需要用到Layout中的资源，但是资源还没有命名id,请各位以下列格式命名，你的姓名_资源名称_资源功能 //
+    //例：jiaomenglei_textview_username,姓名:jiaomenglei,资源名称:textview,功能:显示用户名username //
+    //获取主Activity中的数据,直接调用mActivity                                                    //
+    //PS，如非必须，请不要修改其他代码,如果非得修改，请注释原因                                      //
+    //////////////////////////////////////////////////////////////////////////////////////////////
 }

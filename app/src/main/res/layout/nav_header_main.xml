@@ -15,36 +15,62 @@
     <!--用户信息-->
     <LinearLayout
         android:id="@+id/user_info"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
-        <TextView
-            android:id="@+id/user_name"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+            <!--用户名-->
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:text="@string/username" />
+            <!--用户等级-->
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="right|center_vertical"
+                android:background="@mipmap/ic_level">
+                <TextView
+                    android:id="@+id/user_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="12sp"
+                    android:textStyle="italic|bold"
+                    android:text="6"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--是否已经签到-->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:textColor="#ffffff"
-            android:textSize="15sp"
-            android:text="@string/username" />
-        <LinearLayout
-            android:layout_width="30dp"
-            android:layout_height="15dp"
-            android:layout_marginLeft="10dp"
-            android:gravity="right|center_vertical"
-            android:background="@mipmap/ic_level">
+            android:background="@mipmap/ic_border"
+            android:gravity="center">
             <TextView
-                android:id="@+id/user_level"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:text="6"/>
+                android:id="@+id/user_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_reg"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="12sp"/>
         </LinearLayout>
     </LinearLayout>
 
     <!--用户头像-->
     <ImageView
+        android:id="@+id/user_image"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@mipmap/user_image"

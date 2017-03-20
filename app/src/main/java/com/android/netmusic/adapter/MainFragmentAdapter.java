@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.android.netmusic.activity.MainActivity;
 import com.android.netmusic.fragment.MainCommunityfragment;
 import com.android.netmusic.fragment.MainMusicMenufragment;
 import com.android.netmusic.fragment.MainMusicfragment;
@@ -17,22 +18,24 @@ public class MainFragmentAdapter extends FragmentPagerAdapter {
     private final int ITEM_SUM = 3;
     private FragmentManager fm;
 
-    public MainFragmentAdapter(FragmentManager fm){
+    private  MainActivity mMainActivity;
+    public MainFragmentAdapter(FragmentManager fm, MainActivity mainActivity){
         super(fm);
         this.fm = fm;
+        this.mMainActivity = mainActivity;
     }
 
     @Override
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                MainMusicfragment mmf = new MainMusicfragment();
+                MainMusicfragment mmf = MainMusicfragment.getInstance(mMainActivity);
                 return mmf;
             case 1:
-                MainMusicMenufragment mmmf = new MainMusicMenufragment();
+                MainMusicMenufragment mmmf =MainMusicMenufragment.getInstance(mMainActivity);
                 return mmmf;
             case 2:
-                MainCommunityfragment mcf = new MainCommunityfragment();
+                MainCommunityfragment mcf = MainCommunityfragment.getInstance(mMainActivity);
                 return mcf;
         }
 
