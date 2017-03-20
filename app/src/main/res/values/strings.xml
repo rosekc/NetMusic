@@ -9,4 +9,8 @@
     <string name="menu">歌单</string>
     <string name="radio">主播电台</string>
     <string name="rank">排行榜</string>
+    <string name="modelnight">夜间模式</string>
+    <string name="setting">设置</string>
+    <string name="exit">退出</string>
+    <string name="username">用户名_1234567</string>
 </resources>
