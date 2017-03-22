@@ -49,6 +49,7 @@ public class RadioFragment extends Fragment {
     //如果需要用到Layout中的资源，但是资源还没有命名id,请各位以下列格式命名，你的姓名_资源名称_资源功能 //
     //例：jiaomenglei_textview_username,姓名:jiaomenglei,资源名称:textview,功能:显示用户名username //
     //获取主Activity中的数据,直接调用mActivity                                                    //
-    //PS，如非必须，请不要修改其他代码,如果非得修改，请注释原因                                      //
+    //PS，如非必须，请不要修改其他代码,如果非得修改，请注释原因
+    //
     //////////////////////////////////////////////////////////////////////////////////////////////
 }
