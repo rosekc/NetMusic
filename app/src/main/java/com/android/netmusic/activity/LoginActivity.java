@@ -11,6 +11,8 @@ import com.android.netmusic.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+    static LoginActivity sLoginActivity;
+
     LinearLayout mLoginVisitor;
     Button mLogin;
     Button mRegister;
@@ -44,14 +46,16 @@ public class LoginActivity extends AppCompatActivity {
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(LoginActivity.this, LoginByPhoneNumberActivity.class);
+                startActivity(intent);
             }
         });
 
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -82,5 +86,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        sLoginActivity=LoginActivity.this;
     }
 }
