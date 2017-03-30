@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/radio_image_rosekc"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/draw_gray" />
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/radio_title_rosekc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电台节目名"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/radio_anchor_rosekc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="电台人名称" />
+    </LinearLayout>
+</LinearLayout>

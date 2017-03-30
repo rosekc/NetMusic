@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="84.0" android:viewportHeight="84.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <path android:fillColor="@color/base_red" android:pathData="m20.19 59.51l3.134-3.496 2.785 3.145 4.874 2.098-3.134 3.842v4.893l-4.178-1.748-4.525 1.748v-4.893l-3.134-3.842 4.178-1.747" />
+        <path android:fillColor="@color/base_red" android:pathData="m20.19 38.506l3.134-3.494 2.785 3.145 4.874 2.098-3.134 3.842v4.891l-4.178-1.746-4.525 1.746v-4.891l-3.134-3.842 4.178-1.749" />
+        <path android:fillColor="@color/base_red" android:pathData="m20.19 17.506l3.134-3.494 2.785 3.144 4.874 2.098-3.134 3.842v4.891l-4.178-1.746-4.525 1.746v-4.891l-3.134-3.842 4.178-1.748" />
+        <path android:fillColor="@color/base_red" android:pathData="m37.5 19h29c.829 0 1.5.672 1.5 1.5 0 .829-.671 1.5-1.5 1.5h-29c-.828 0-1.5-.671-1.5-1.5 0-.828.672-1.5 1.5-1.5" />
+        <path android:fillColor="@color/base_red" android:pathData="m37.5 40h29c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5h-29c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5" />
+        <path android:fillColor="@color/base_red" android:pathData="m37.5 61h29c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5h-29c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5" />
+        <path android:fillColor="@color/base_red" android:pathData="m72 3h-60c-4.971 0-9 4.03-9 9v60c0 4.971 4.03 9 9 9h60c4.971 0 9-4.03 9-9v-60c0-4.971-4.03-9-9-9m6 69c0 3.314-2.687 6-6 6h-60c-3.313 0-6-2.686-6-6v-60c0-3.313 2.687-6 6-6h60c3.313 0 6 2.686 6 6v60" />
+    </group>
+</vector>
