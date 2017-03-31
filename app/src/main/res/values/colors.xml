@@ -9,4 +9,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="draw_gray">#707070</color>
+    <!--登录Activity要用到的颜色 陈铭键-->
+    <color name="login_edit_text_normal">#373737</color>
+    <color name="login_edit_text_clear">#BEBEBE</color>
 </resources>
