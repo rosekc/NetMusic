@@ -4,53 +4,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.youth.banner.Banner
-        android:id="@+id/radio_banner_rosekc"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"></com.youth.banner.Banner>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/ic_radio_classification" />
-            <TextView
-                android:textColor="#000000"
-                android:textSize="16dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="电台分类"/>
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/ic_radio_rank" />
-            <TextView
-                android:textColor="#000000"
-                android:textSize="16dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="电台排行"/>
-        </LinearLayout>
-    </LinearLayout>
 
-    <ListView
+    <ExpandableListView
         android:id="@+id/radio_list_view_rosekc"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

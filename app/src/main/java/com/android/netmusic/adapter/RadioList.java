@@ -8,11 +8,11 @@ import java.util.List;
 
 public class RadioList {
     private String radioListTitle;
-    private RadioItemAdapter radioItemAdapter;
+    private List<RadioItem> radioItemList;
 
-    public RadioList(String radioListTitle, RadioItemAdapter radioItemAdapter) {
+    public RadioList(String radioListTitle, List<RadioItem> radioItemList) {
         this.radioListTitle = radioListTitle;
-        this.radioItemAdapter = radioItemAdapter;
+        this.radioItemList = radioItemList;
     }
 
     public String getRadioListTitle() {
@@ -23,11 +23,11 @@ public class RadioList {
         this.radioListTitle = radioListTitle;
     }
 
-    public RadioItemAdapter getRadioItemAdapter() {
-        return radioItemAdapter;
+    public List<RadioItem> getRadioItemList() {
+        return radioItemList;
     }
 
-    public void setRadioItemAdapter(RadioItemAdapter radioItemAdapter) {
-        this.radioItemAdapter = radioItemAdapter;
+    public void setRadioItemList(List<RadioItem> radioItemList) {
+        this.radioItemList = radioItemList;
     }
 }

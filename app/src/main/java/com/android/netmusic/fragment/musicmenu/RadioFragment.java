@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -67,14 +68,23 @@ public class RadioFragment extends Fragment {
         testRadioItem.add(new RadioItem("他改变了中国", "Mr. Frog", R.mipmap.radio_item1));
         testRadioItem.add(new RadioItem("他改变了中国", "Mr. Frog", R.mipmap.radio_item1));
         testRadioItem.add(new RadioItem("他改变了中国", "Mr. Frog", R.mipmap.radio_item1));
-        testRadioList.add(new RadioList("去西方看看1", new RadioItemAdapter(getContext(), testRadioItem)));
-        testRadioList.add(new RadioList("去西方看看2", new RadioItemAdapter(getContext(), testRadioItem)));
+        testRadioList.add(new RadioList("去西方看看1", testRadioItem));
+        testRadioList.add(new RadioList("去西方看看2", testRadioItem));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_musicmenu_radio,null);
         initTestSource();
+//        ListView listview = (ListView) view.findViewById(R.id.radio_list_view_rosekc);
+//        listview.setAdapter(new RadioListAdapter(getContext(), testRadioList));
+        ExpandableListView expandableListView = (ExpandableListView)
+                view.findViewById(R.id.radio_list_view_rosekc);
+        expandableListView.addHeaderView(LayoutInflater.from(getContext()).inflate(R.layout.radio_header, null));
+        expandableListView.setAdapter(new RadioListAdapter(getContext(), testRadioList));
+        for (int i = 0; i < testRadioList.size(); i++) {
+            expandableListView.expandGroup(i);
+        }
         Banner banner = (Banner) view.findViewById(R.id.radio_banner_rosekc);
         banner.setImageLoader(new ImageLoader() {
             @Override
@@ -83,19 +93,6 @@ public class RadioFragment extends Fragment {
             }
         });
         banner.setImages(testBannerImage).start();
-        ListView listview = (ListView) view.findViewById(R.id.radio_list_view_rosekc);
-        listview.setAdapter(new RadioListAdapter(getContext(), testRadioList));
         return view;
     }
-
-
-
-    //////////////////////////////////////////////////////////////////////////////////////////////
-    //以下是各组员添加代码,添加代码注明功能,自己的姓名                                              //
-    //如果需要用到Layout中的资源，但是资源还没有命名id,请各位以下列格式命名，你的姓名_资源名称_资源功能 //
-    //例：jiaomenglei_textview_username,姓名:jiaomenglei,资源名称:textview,功能:显示用户名username //
-    //获取主Activity中的数据,直接调用mActivity                                                    //
-    //PS，如非必须，请不要修改其他代码,如果非得修改，请注释原因
-    //
-    //////////////////////////////////////////////////////////////////////////////////////////////
 }
